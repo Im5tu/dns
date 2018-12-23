@@ -1,6 +1,9 @@
 ---
 ? ''
 : - ttl: 1
+    type: A
+    value: 185.199.108.153
+  - ttl: 1
     type: MX
     values:
     - exchange: mx1.emailsrvr.com.
@@ -18,3 +21,7 @@ autodiscover:
   ttl: 1
   type: CNAME
   value: autodiscover.emailsrvr.com.
+www:
+  ttl: 1
+  type: CNAME
+  value: signalone.cloud.
