@@ -10,4 +10,5 @@ variables:
 
 steps:
 - script: 'octodns-sync --config-file=config\production.yml'
+  workingDirectory: '$(Build.SourcesDirectory)'
   displayName: 'Test DNS Changes'
