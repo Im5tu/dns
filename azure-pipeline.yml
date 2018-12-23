@@ -1,0 +1,15 @@
+resources:
+  containers:
+  - container: octodns
+    image: blob/octodns
+
+#pool:
+  #vmImage: 'ubuntu-16.04'
+
+container: octodns
+
+variables:
+- group: DNS
+
+script:
+  - cmd: octodns-sync --config-file=config\production.yml
