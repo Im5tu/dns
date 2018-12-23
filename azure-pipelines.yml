@@ -17,3 +17,13 @@ steps:
     CLOUDFLARE_TOKEN: $(CLOUDFLARE_TOKEN)
     DNSIMPLE_ACCOUNT: $(DNSIMPLE_ACCOUNT)
     DNSIMPLE_TOKEN: $(DNSIMPLE_TOKEN)
+
+- script: 'octodns-sync --config-file=config/production.yml'
+  workingDirectory: '$(Build.SourcesDirectory)'
+  displayName: 'Apply DNS Changes'
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+  env:
+    CLOUDFLARE_EMAIL: $(CLOUDFLARE_EMAIL)
+    CLOUDFLARE_TOKEN: $(CLOUDFLARE_TOKEN)
+    DNSIMPLE_ACCOUNT: $(DNSIMPLE_ACCOUNT)
+    DNSIMPLE_TOKEN: $(DNSIMPLE_TOKEN)
