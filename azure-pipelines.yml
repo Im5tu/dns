@@ -12,4 +12,5 @@ variables:
 - group: DNS
 
 steps:
-  - cmd: octodns-sync --config-file=config\production.yml
+- script: 'octodns-sync --config-file=config\production.yml'
+  displayName: 'Test DNS Changes'
