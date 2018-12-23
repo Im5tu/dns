@@ -12,3 +12,8 @@ steps:
 - script: 'octodns-sync --config-file=config/production.yml'
   workingDirectory: '$(Build.SourcesDirectory)'
   displayName: 'Test DNS Changes'
+  env:
+    CLOUDFLARE_EMAIL: $(CLOUDFLARE_EMAIL)
+    CLOUDFLARE_TOKEN: $(CLOUDFLARE_TOKEN)
+    DNSIMPLE_ACCOUNT: $(DNSIMPLE_ACCOUNT)
+    DNSIMPLE_TOKEN: $(DNSIMPLE_TOKEN)
