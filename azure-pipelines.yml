@@ -11,5 +11,5 @@ container: octodns
 variables:
 - group: DNS
 
-script:
+steps:
   - cmd: octodns-sync --config-file=config\production.yml
