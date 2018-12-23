@@ -1,0 +1,27 @@
+---
+providers:
+  config:
+    class: octodns.provider.yaml.YamlProvider
+    directory: ./config
+  cloudflare:
+    class: octodns.provider.cloudflare.CloudflareProvider
+    email: env/CLOUDFLARE_EMAIL
+    token: env/CLOUDFLARE_TOKEN
+  dnsimple:
+    class: octodns.provider.dnsimple.DnsimpleProvider
+    account: env/DNSIMPLE_ACCOUNT
+    token: env/DNSIMPLE_TOKEN
+
+zones:
+  im5tu.io.:
+    sources:
+      - config
+    targets:
+      - cloudflare
+      - dnsimple
+  signalone.cloud.:
+    sources:
+      - config
+    targets:
+      - cloudflare
+      - dnsimple
