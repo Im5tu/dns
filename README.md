@@ -4,6 +4,7 @@ This repository codes the DNS settings for the following domains:
 
 - im5tu.io
 - signalone.cloud
+- dnbmth.io
 
 And the settings are sync'd between the following providers:
 

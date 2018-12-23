@@ -1,0 +1,36 @@
+---
+? ''
+: - ttl: 1
+    type: A
+    value: 151.101.41.147
+  - ttl: 1
+    type: AAAA
+    value: 2a04:4e42:a::403
+  - ttl: 1
+    type: MX
+    values:
+    - exchange: mx1.emailsrvr.com.
+      preference: 10
+    - exchange: mx2.emailsrvr.com.
+      preference: 20
+  - ttl: 1
+    type: TXT
+    values:
+    - ALIAS for dnbmth.github.io
+    - v=spf1 include:emailsrvr.com ~all
+autodiscover:
+  ttl: 1
+  type: CNAME
+  value: autodiscover.emailsrvr.com.
+meet:
+  ttl: 1
+  type: A
+  value: 188.166.203.69
+videos:
+  ttl: 1
+  type: A
+  value: 188.166.203.69
+www:
+  ttl: 1
+  type: CNAME
+  value: dnbmth.io.
