@@ -1,21 +1,24 @@
 ---
 ? ''
-: - ttl: 120
+: - octodns:
+      cloudflare:
+        proxied: true
+    ttl: 3600
     type: A
     value: 151.101.40.133
-  - ttl: 1
+  - ttl: 3600
     type: MX
     value:
       exchange: im5tu-io.mail.protection.outlook.com.
       preference: 0
-  - ttl: 1
+  - ttl: 3600
     type: TXT
     values:
     - ALIAS for im5tu.github.io
     - MS=ms88189568
     - v=spf1 include:spf.protection.outlook.com -all
 _sip._tls:
-  ttl: 1
+  ttl: 3600
   type: SRV
   value:
     port: 443
@@ -23,7 +26,7 @@ _sip._tls:
     target: sipdir.online.lync.com.
     weight: 1
 _sipfederationtls._tcp:
-  ttl: 1
+  ttl: 3600
   type: SRV
   value:
     port: 5061
@@ -31,30 +34,51 @@ _sipfederationtls._tcp:
     target: sipfed.online.lync.com.
     weight: 1
 autodiscover:
-  ttl: 1
+  octodns:
+    cloudflare:
+      proxied: true
+  ttl: 3600
   type: CNAME
   value: autodiscover.outlook.com.
 enterpriseenrollment:
-  ttl: 1
+  octodns:
+    cloudflare:
+      proxied: true
+  ttl: 3600
   type: CNAME
   value: enterpriseenrollment.manage.microsoft.com.
 enterpriseregistration:
-  ttl: 1
+  octodns:
+    cloudflare:
+      proxied: true
+  ttl: 3600
   type: CNAME
   value: enterpriseregistration.windows.net.
 lyncdiscover:
-  ttl: 1
+  octodns:
+    cloudflare:
+      proxied: true
+  ttl: 3600
   type: CNAME
   value: webdir.online.lync.com.
 msoid:
-  ttl: 1
+  octodns:
+    cloudflare:
+      proxied: true
+  ttl: 3600
   type: CNAME
   value: clientconfig.microsoftonline-p.net.
 sip:
-  ttl: 1
+  octodns:
+    cloudflare:
+      proxied: true
+  ttl: 3600
   type: CNAME
   value: sipdir.online.lync.com.
 www:
-  ttl: 120
+  octodns:
+    cloudflare:
+      proxied: true
+  ttl: 3600
   type: CNAME
   value: im5tu.io.

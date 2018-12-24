@@ -1,27 +1,36 @@
 ---
 ? ''
-: - ttl: 1
+: - octodns:
+      cloudflare:
+        proxied: true
+    ttl: 3600
     type: A
     value: 185.199.108.153
-  - ttl: 1
+  - ttl: 3600
     type: MX
     values:
     - exchange: mx1.emailsrvr.com.
       preference: 10
     - exchange: mx2.emailsrvr.com.
       preference: 20
-  - ttl: 1
+  - ttl: 3600
     type: TXT
     value: v=spf1 include:emailsrvr.com ~all
 _github-challenge-signaloneltd:
-  ttl: 120
+  ttl: 3600
   type: TXT
   value: d7e041b559
 autodiscover:
-  ttl: 1
+  octodns:
+    cloudflare:
+      proxied: true
+  ttl: 3600
   type: CNAME
   value: autodiscover.emailsrvr.com.
 www:
-  ttl: 1
+  octodns:
+    cloudflare:
+      proxied: true
+  ttl: 3600
   type: CNAME
   value: signalone.cloud.
