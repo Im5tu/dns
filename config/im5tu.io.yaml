@@ -36,42 +36,42 @@ _sipfederationtls._tcp:
 autodiscover:
   octodns:
     cloudflare:
-      proxied: true
+      proxied: false
   ttl: 3600
   type: CNAME
   value: autodiscover.outlook.com.
 enterpriseenrollment:
   octodns:
     cloudflare:
-      proxied: true
+      proxied: false
   ttl: 3600
   type: CNAME
   value: enterpriseenrollment.manage.microsoft.com.
 enterpriseregistration:
   octodns:
     cloudflare:
-      proxied: true
+      proxied: false
   ttl: 3600
   type: CNAME
   value: enterpriseregistration.windows.net.
 lyncdiscover:
   octodns:
     cloudflare:
-      proxied: true
+      proxied: false
   ttl: 3600
   type: CNAME
   value: webdir.online.lync.com.
 msoid:
   octodns:
     cloudflare:
-      proxied: true
+      proxied: false
   ttl: 3600
   type: CNAME
   value: clientconfig.microsoftonline-p.net.
 sip:
   octodns:
     cloudflare:
-      proxied: true
+      proxied: false
   ttl: 3600
   type: CNAME
   value: sipdir.online.lync.com.

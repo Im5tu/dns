@@ -9,24 +9,75 @@
   - ttl: 3600
     type: MX
     values:
-    - exchange: mx1.emailsrvr.com.
-      preference: 10
-    - exchange: mx2.emailsrvr.com.
-      preference: 20
+    - exchange: signalone-cloud.mail.protection.outlook.com.
+      preference: 0
   - ttl: 3600
     type: TXT
-    value: v=spf1 include:emailsrvr.com ~all
+    values: 
+    - MS=ms11823648
+    - v=spf1 include:spf.protection.outlook.com -all
 _github-challenge-signaloneltd:
   ttl: 3600
   type: TXT
   value: d7e041b559
+_sip._tls:
+  ttl: 3600
+  type: SRV
+  value:
+    port: 443
+    priority: 100
+    target: sipdir.online.lync.com.
+    weight: 1
+_sipfederationtls._tcp:
+  ttl: 3600
+  type: SRV
+  value:
+    port: 5061
+    priority: 100
+    target: sipfed.online.lync.com.
+    weight: 1
 autodiscover:
   octodns:
     cloudflare:
-      proxied: true
+      proxied: false
   ttl: 3600
   type: CNAME
-  value: autodiscover.emailsrvr.com.
+  value: autodiscover.outlook.com.
+enterpriseenrollment:
+  octodns:
+    cloudflare:
+      proxied: false
+  ttl: 3600
+  type: CNAME
+  value: enterpriseenrollment.manage.microsoft.com.
+enterpriseregistration:
+  octodns:
+    cloudflare:
+      proxied: false
+  ttl: 3600
+  type: CNAME
+  value: enterpriseregistration.windows.net.
+lyncdiscover:
+  octodns:
+    cloudflare:
+      proxied: false
+  ttl: 3600
+  type: CNAME
+  value: webdir.online.lync.com.
+msoid:
+  octodns:
+    cloudflare:
+      proxied: false
+  ttl: 3600
+  type: CNAME
+  value: clientconfig.microsoftonline-p.net.
+sip:
+  octodns:
+    cloudflare:
+      proxied: false
+  ttl: 3600
+  type: CNAME
+  value: sipdir.online.lync.com.
 www:
   octodns:
     cloudflare:
